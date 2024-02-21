@@ -57,21 +57,6 @@ export const News: React.FC = () => {
         }
     }, [comments, id, dispatch, comments.length, currentNews.id]);
 
-
-
-
-
-
-    console.log('SSS~~~~~~~~~~~~~', {
-        currentNews,
-        comments,
-    });
-
-
-
-
-
-
     return (
         <div className={styles.wrapper}>
             <header className={styles.header}>

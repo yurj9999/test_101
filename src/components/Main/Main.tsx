@@ -38,16 +38,6 @@ export const Main: React.FC = () => {
         }
     }, [dispatch, allNews.length]);
 
-    
-
-    
-
-
-    console.log('ALL~~~~~~~~~~~~', allNews);
-
-
-
-
     return (
         <div className={styles.wrapper}>
             <header className={styles.header}>
