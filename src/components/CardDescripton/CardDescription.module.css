@@ -1,0 +1,14 @@
+.textDescription {
+    --max-lines: 3;
+    position: relative;
+    height: 90px;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+.textDescription::before {
+    position: absolute;
+    content: "...";
+    bottom: 0;
+    right: 0;
+}

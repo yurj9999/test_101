@@ -1,25 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { ErrorPage, Main, News } from './components';
+import { Provider } from 'react-redux';
+import { rootReducer } from './services/reducers';
+import { createStore  } from 'redux';
+import { Route, BrowserRouter, Routes } from 'react-router-dom';
+import { ERoutes } from './types';
+
+const store = createStore(rootReducer);
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <BrowserRouter>
+        <Routes>
+          <Route path={`${ERoutes.CurrentNews}/:id`} element={<News />} />
+          <Route path={ERoutes.Main} element={<Main />} />
+          <Route path="*" element={<ErrorPage />} />
+        </Routes>
+      </BrowserRouter>
+    </Provider>
   );
 }
 

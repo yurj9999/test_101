@@ -1,0 +1,29 @@
+.wrapper {
+    width: 80%;
+    margin: 0 auto;
+    height: calc(100vh - 100px);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: lightblue;
+}
+
+.main {
+    padding: 30px 0;
+    height: 100%;
+}
+
+.cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.card {
+    flex-basis: 27%;
+    margin-bottom: 50px;
+}

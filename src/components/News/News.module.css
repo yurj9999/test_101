@@ -1,0 +1,28 @@
+.wrapper {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: azure;
+}
+
+.main {
+    padding: 30px 0;
+    height: 100%;
+}
+
+.news, .comments {
+    margin-top: 20px;
+}
+
+.img {
+    margin: 20px 0;
+}
+
+.commentsTitle {
+    margin-bottom: 20px;
+}
